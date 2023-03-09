@@ -1,4 +1,5 @@
 vim.keymap.set('n', 'tt', '<cmd>NvimTreeToggle<cr>', { desc = '[T]ree [T]oggle'})
+vim.keymap.set('n', 'tf', '<cmd>NvimTreeFocus<cr>', { desc = '[T]ree [F]ocus' })
 
 return {
   'kyazdani42/nvim-tree.lua',
