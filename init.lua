@@ -125,6 +125,14 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'onedark'
+      require('onedark').setup {
+        style = 'deep',
+        transparent = true,
+        lualine = {
+          transparent = true,
+        },
+      }
+      require('onedark').load()
     end,
   },
 
@@ -138,6 +146,9 @@ require('lazy').setup({
         theme = 'onedark',
         component_separators = '|',
         section_separators = '',
+        disabled_filetypes = {
+          'NvimTree'
+        },
       },
     },
   },
