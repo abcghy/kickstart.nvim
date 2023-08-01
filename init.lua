@@ -59,6 +59,8 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath)
+vim.opt.list = true
+vim.opt.listchars:append "space: "
 
 -- [[ Configure plugins ]]
 -- NOTE: Here is where you install your plugins.
@@ -158,8 +160,8 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'onedark'
+      vim.o.background = 'light'
       require('onedark').setup {
-        style = 'deep',
         transparent = true,
         lualine = {
           transparent = true,
@@ -399,10 +401,10 @@ vim.defer_fn(function()
     incremental_selection = {
       enable = true,
       keymaps = {
-        init_selection = '<c-space>',
-        node_incremental = '<c-space>',
-        scope_incremental = '<c-s>',
-        node_decremental = '<M-space>',
+        init_selection = '<CR>',
+        node_incremental = '<CR>',
+        scope_incremental = '<c-s>', -- Looks like useless for now
+        node_decremental = '<S-TAB>',
       },
     },
     textobjects = {
