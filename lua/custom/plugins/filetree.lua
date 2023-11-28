@@ -84,12 +84,6 @@ return {
       on_attach = on_attach,
       view = {
           width = 50,
-          mappings = {
-              list = {
-                  { key = { "<CR>", "l", }, action = "edit" },
-                  { key = { "<BS>", "h", }, action = "close_node"},
-              },
-          },
       },
       renderer = {
           indent_markers = {
