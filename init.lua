@@ -160,7 +160,7 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'onedark'
-      vim.o.background = 'light'
+      -- vim.o.background = 'light'
       require('onedark').setup {
         transparent = true,
         lualine = {
@@ -391,7 +391,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash' },
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'elixir', 'kotlin' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
@@ -528,6 +528,7 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
+  elixirls = {},
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs'} },
 
